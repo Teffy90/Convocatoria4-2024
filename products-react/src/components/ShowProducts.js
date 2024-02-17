@@ -35,10 +35,10 @@ const ShowProducts = () => {
         setImages('');
         setCategories('');
         setOperation(op);
-        if(op === 1){
+        if (op === 1) {
             setTitle('Registrar Producto');
         }
-        else if(op === 2){
+        else if (op === 2) {
             setTitle('Editar Producto');
             setId(id);
             setName(title);
@@ -47,9 +47,9 @@ const ShowProducts = () => {
             setImages(images);
             setCategories('');
         }
-        window.setTimeout(function(){
+        window.setTimeout(function () {
             document.getElementById('nombre').focus();
-        },500);
+        }, 500);
     }
 
 
@@ -59,7 +59,7 @@ const ShowProducts = () => {
                 <div className='row mt-3'>
                     <div className='col-md-4 offset-md-4'>
                         <div className='d-grid mx-auto'>
-                            <button onClick={()=> openModal(1)} className='btn btn-dark' data-bs-toggle='modal' data-bs-target='#modalProducts'>Añadir</button>
+                            <button onClick={() => openModal(1)} className='btn btn-dark' data-bs-toggle='modal' data-bs-target='#modalProducts'>Añadir</button>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ const ShowProducts = () => {
                                             <td><img src={product.images} className="img-thumbnail" alt='' /></td>
                                             <td>Aqui va la categoria</td>
                                             <td>
-                                                <button onClick={()=> openModal(2,product.id, product.title,product.price, product.description,product.images )} type="button" class="btn btn-warning"  data-bs-toggle='modal' data-bs-target='#modalProducts' >Editar</button>
+                                                <button onClick={() => openModal(2, product.id, product.title, product.price, product.description, product.images)} type="button" class="btn btn-warning" data-bs-toggle='modal' data-bs-target='#modalProducts' >Editar</button>
                                                 <button type="button" class="btn btn-danger">Eliminar</button>
 
                                             </td>
@@ -136,9 +136,6 @@ const ShowProducts = () => {
                             <div className='d-grid col-6 mx-auto'>
                                 <button type="button" class="btn btn-success">Guardar</button>
                             </div>
-                        </div>
-                        <div className='modal-footer'>
-                            <button type="button" class="btn btn-secondary">Cerrar</button>
                         </div>
                     </div>
                 </div>
