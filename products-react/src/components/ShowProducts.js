@@ -50,7 +50,6 @@ const ShowProducts = () => {
         window.setTimeout(function(){
             document.getElementById('nombre').focus();
         },500);
-
     }
 
 
